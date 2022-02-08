@@ -7,7 +7,7 @@
     // ".husky": true,
     // ".plop": true,
     // ".vscode": true,
-    "dist": true,
+    // "dist": true,
     "node_modules": true
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",

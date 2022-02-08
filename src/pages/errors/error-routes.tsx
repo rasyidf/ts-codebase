@@ -6,7 +6,11 @@ const notFoundPage = async (): Promise<ReactElement> =>
 
 const routeError: Array<Route> = [
   {
-    path: '/404',
+    path: '404',
+    element: notFoundPage,
+  },
+  {
+    path: '*',
     element: notFoundPage,
   },
 ];

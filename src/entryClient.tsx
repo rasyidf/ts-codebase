@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import '@/styles/index.scss';
+import 'regenerator-runtime';
 import App from './App';
 
 ReactDOM.render(

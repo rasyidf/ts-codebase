@@ -2,9 +2,7 @@ const prettierrc = require('rc')('./prettier');
 
 module.exports = {
     extends: ['airbnb', 'airbnb-typescript'],
-    plugins: ['prettier'],
     rules: {
-        'prettier/prettier': ['warn', prettierrc],
         '@typescript-eslint/no-explicit-any': 2,
         '@typescript-eslint/no-unused-var': 0,
         "react/jsx-uses-react": "off",
@@ -19,6 +17,11 @@ module.exports = {
             "ObjectPattern": { "multiline": true },
             "ImportDeclaration": "never",
             "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+        }],
+        "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+        "react/jsx-props-no-spreading": ["warn", {
+            "html": "enforce",
+            "custom": "ignore"
         }]
     },
     parserOptions: {

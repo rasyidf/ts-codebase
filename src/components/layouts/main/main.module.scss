@@ -1,0 +1,13 @@
+.shell {
+  min-height: 100vh;
+}
+
+.navItem {
+  width: calc(100% - 16px);
+  margin: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  &:hover {
+    background-color: #e5f3f371;
+  }
+}

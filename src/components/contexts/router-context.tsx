@@ -9,12 +9,10 @@ interface RouteProps {
   children: ReactNode;
 }
 
-function RouteProvider({ children }: RouteProps): ReactElement {
-  return (
-    <Router location={location} routes={routes}>
-      {children}
-    </Router>
-  );
-}
+const RouteProvider = ({ children }: RouteProps): ReactElement => (
+  <Router location={location} routes={routes}>
+    {children}
+  </Router>
+);
 
 export default RouteProvider;

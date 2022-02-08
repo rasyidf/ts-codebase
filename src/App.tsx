@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { MantineProvider as ThemeProvider } from '@mantine/core';
 import { Outlet } from '@tanstack/react-location';
 import RouteProvider from '@/components/contexts/router-context';
-import theme from '@/styles/vendor/mui.config';
-import './styles/App.scss';
+import '@/styles/index.scss';
+import theme from '@/styles/vendor/mantine.config';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,17 +13,22 @@ const queryClient = new QueryClient({
   },
 });
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <QueryClientProvider client={queryClient}>
-        <RouteProvider>
-          <Outlet />
-        </RouteProvider>
-      </QueryClientProvider>
-    </ThemeProvider>
-  );
-}
+const App = () => (
+  <ThemeProvider
+    theme={theme}
+    withNormalizeCSS
+    withGlobalStyles
+    emotionOptions={{
+      key: 'biru', prepend: false,
+    }}
+  >
+
+    <QueryClientProvider client={queryClient}>
+      <RouteProvider>
+        <Outlet />
+      </RouteProvider>
+    </QueryClientProvider>
+  </ThemeProvider>
+);
 
 export default App;

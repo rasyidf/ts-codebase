@@ -1,5 +1,3 @@
-function Error404() {
-  return <div>Error 404</div>;
-}
+const Error404 = () => <div>Error 404</div>;
 
 export default Error404;
